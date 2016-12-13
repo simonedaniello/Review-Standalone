@@ -10,6 +10,7 @@ public class Review {
     private String review;
     private String user;
     private String article;
+    private String owner;
 
     public boolean isWarning() {
         return warning;
@@ -49,5 +50,13 @@ public class Review {
 
     public void setArticle(String article) {
         this.article = article;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 }
