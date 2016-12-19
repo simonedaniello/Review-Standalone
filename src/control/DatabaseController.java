@@ -23,9 +23,7 @@ class DatabaseController {
         return instance;
     }
 
-    void setReview(Review review){
-        System.out.println("sono arrivato fino a qui");
-
+    boolean setReview(Review review){
         String sql = "INSERT INTO ARTICLES.recensione (SEGNALAZIONE, UTENTE, ARTICOLO, PROPRIETARIO, TESTO, RAITNG) VALUES ("+
                 review.isWarning() +", '" + review.getUser()+"', '" +
                 review.getArticle()+"', '"+ review.getOwner() +"' , '" + review.getReview()+
@@ -35,22 +33,9 @@ class DatabaseController {
             Statement stmt = provider.getConnection().createStatement();
             stmt.executeUpdate(sql);
         } catch (SQLException e) {
-            e.printStackTrace();
+            return false;
         }
+        return true;
     }
 
-    void setWarning(Review review){
-
-        String sql = "INSERT INTO ARTICLES.recensione (SEGNALAZIONE, UTENTE, ARTICOLO, PROPRIETARIO, TESTO, RAITNG) VALUES ("+
-                review.isWarning() +", '" + review.getUser()+"', '" +
-                review.getArticle()+"', '"+ review.getOwner() +"' , '" + review.getReview()+
-                "' , '" + review.getRating()+"')";
-
-        try {
-            Statement stmt = provider.getConnection().createStatement();
-            stmt.executeUpdate(sql);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 }

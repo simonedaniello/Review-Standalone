@@ -8,7 +8,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>superuser</user-name>
-      <introspection-scope>ispw:public,pg_catalog,superuser</introspection-scope>
+      <introspection-scope>ispw:pg_catalog,public,superuser</introspection-scope>
       <resolve-scope>ispw:public,superuser</resolve-scope>
     </data-source>
   </component>
