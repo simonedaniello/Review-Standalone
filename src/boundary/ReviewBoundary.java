@@ -16,13 +16,13 @@ public class ReviewBoundary {
     private String vendor;
     private JFrame frame;
 
-    public ReviewBoundary(String username, String article, String vendor){
+    public ReviewBoundary(String username, String article, String vendor, JFrame frame){
 
         this.username = username;
         this.article = article;
         this.vendor = vendor;
+        this.frame = frame;
 
-        frame = new JFrame();
         JTextArea textArea = new JTextArea();
         textArea.setColumns(20);
         textArea.setLineWrap(true);
@@ -102,16 +102,15 @@ public class ReviewBoundary {
         gbc.insets = new Insets(10, 10, 10, 10);
         mainJpanel.add(buttons, gbc);
 
-        frame.add(mainJpanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
-        frame.pack();
-        frame.setVisible(true);
+        this.frame.setContentPane(mainJpanel);
+        this.frame.pack();
+        this.frame.setVisible(true);
+
+
 
         segnalazioneB.addActionListener(e -> {
-            System.out.println("ciao");
             frame.setVisible(false);
-            ArticlesController.getInstance().getSegnalationBoundary(frame, vendor);
+            ArticlesController.getInstance().getSegnalationBoundary(frame, vendor, article, username);
         });
         Actions okButtonAction = new Actions(textArea, slider.getValue());
         okB.addActionListener(okButtonAction);

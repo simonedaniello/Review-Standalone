@@ -1,21 +1,26 @@
 package boundary;
 
 
+import control.ArticlesController;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SegnalationBoundary {
 
     private JFrame frame;
     private String vendor;
+    private JTextArea textArea;
 
 
     public SegnalationBoundary(JFrame frame, String vendor){
 
         this.frame = frame;
         this.vendor = vendor;
-//        initWindow();
-        JTextArea textArea = new JTextArea();
+
+        textArea = new JTextArea();
         textArea.setColumns(20);
         textArea.setLineWrap(true);
         textArea.setRows(5);
@@ -36,7 +41,7 @@ public class SegnalationBoundary {
         gbc.gridy = 0;
         gbc.anchor = GridBagConstraints.PAGE_START;
         gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(new JLabel("Seganala " + this.vendor), gbc);
+        mainJpanel.add(new JLabel("Segnala " + this.vendor), gbc);
 
         gbc.ipady = 30;
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -55,56 +60,45 @@ public class SegnalationBoundary {
         gbc.insets = new Insets(10, 10, 10, 10);
         mainJpanel.add(buttons, gbc);
 
+        Actions azioneSend = new Actions(0);
+        Actions azioneBack = new Actions(1);
+
+        backButton.addActionListener(azioneBack);
+        okB.addActionListener(azioneSend);
+
         this.frame.setContentPane(mainJpanel);
+        this.frame.pack();
         this.frame.setVisible(true);
 
     }
 
-    private void initWindow(){
+    private class Actions implements ActionListener {
 
-        JTextArea textArea = new JTextArea();
-        textArea.setColumns(20);
-        textArea.setLineWrap(true);
-        textArea.setRows(5);
-        textArea.setWrapStyleWord(true);
-        textArea.setEditable(true);
+        private int kind;
 
-        JScrollPane scrollpane = new JScrollPane(textArea);
-        scrollpane.setVerticalScrollBarPolicy ( ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS );
+        private Actions(int kind) {
+            this.kind = kind;
+        }
 
+        public void actionPerformed(ActionEvent event){
+            if(kind == 1){
+                frame.setVisible(false);
+                ArticlesController.getInstance().getReviewBoundary(frame, vendor);
+            }
+            else if (kind == 0){
+                frame.setVisible(false);
+                if(ArticlesController.getInstance().sendWarning(textArea.getText(), vendor) == 1) {
+                    frame.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "successo");
+                    System.exit(0);
+                }
+                else if(ArticlesController.getInstance().sendWarning(textArea.getText(), vendor) == 0){
+                    JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una segnalazione riguardante questo venditore");
+                }
 
-        JButton backButton = new JButton("Back");
-        JButton okB = new JButton("Invia");
-
-        JPanel mainJpanel = new JPanel(new GridBagLayout());
-        GridBagConstraints gbc = new GridBagConstraints();
-
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(new JLabel("Seganala " + this.vendor), gbc);
-
-        gbc.ipady = 30;
-        gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx = 0;
-        gbc.gridy = 1;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(scrollpane, gbc);
-
-        JPanel buttons = new JPanel();
-        buttons.add(okB);
-        buttons.add(backButton);
-
-        gbc.gridx = 0;
-        gbc.gridy = 5;
-        gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(buttons, gbc);
-
-        this.frame.setContentPane(mainJpanel);
-        this.frame.setVisible(true);
-
+            }
+        }
     }
+
 
 }

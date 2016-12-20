@@ -6,12 +6,16 @@ import entity.Review;
 
 import javax.swing.*;
 
+import static com.sun.imageio.plugins.jpeg.JPEG.vendor;
+
 /**
  * Created by dandi on 13/12/16.
  */
 public class ArticlesController {
 
     private static ArticlesController instance = new ArticlesController();
+    private String articlename;
+    private String username;
 
     private ArticlesController(){
     }
@@ -41,20 +45,30 @@ public class ArticlesController {
         }
     }
 
-    public void sendWarning(String text, String articlename, String username, String vendor){
+    public int sendWarning(String text, String vendor){
 
         Review review = new Review();
-        review.setArticle(articlename);
-        review.setUser(username);
+        review.setArticle(this.articlename);
+        review.setUser(this.username);
         review.setReview(text.replace("\'", "\""));
         review.setOwner(vendor);
         review.setWarning(true);
 
-        DatabaseController.getInstance().setReview(review);
+        if(DatabaseController.getInstance().setReview(review))
+            return 1;
+        else
+            return 0;
     }
 
-    public void getSegnalationBoundary(JFrame frame, String vendor){
+    public void getSegnalationBoundary(JFrame frame, String vendor, String articleName, String username){
+        this.articlename = articleName;
+        this.username = username;
         new SegnalationBoundary(frame, vendor);
+    }
+
+    public void getReviewBoundary(JFrame frame, String vendor){
+        frame.repaint();
+        new ReviewBoundary(username, articlename, vendor, frame);
     }
 
 }
