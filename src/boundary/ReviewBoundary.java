@@ -15,14 +15,15 @@ public class ReviewBoundary {
     private String article;
     private String vendor;
     private JFrame frame;
+    private JFrame confirmFrame;
 
-    public ReviewBoundary(String username, String article, String vendor, JFrame frame){
+
+    public ReviewBoundary(String username, String article, String vendor, JFrame frame) {
 
         this.username = username;
         this.article = article;
         this.vendor = vendor;
         this.frame = frame;
-
         JTextArea textArea = new JTextArea();
         textArea.setColumns(20);
         textArea.setLineWrap(true);
@@ -47,7 +48,7 @@ public class ReviewBoundary {
             }
         });
         JScrollPane scrollpane = new JScrollPane(textArea);
-        scrollpane.setVerticalScrollBarPolicy ( ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS );
+        scrollpane.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
         JSlider slider = new JSlider(JSlider.HORIZONTAL, 0, 5, 5);
         slider.setMajorTickSpacing(1);
@@ -108,8 +109,8 @@ public class ReviewBoundary {
             frame.setVisible(false);
             ArticlesController.getInstance().getSegnalationBoundary(frame, vendor, article, username);
         });
-        Actions okButtonAction = new Actions(textArea, slider.getValue());
-        okB.addActionListener(okButtonAction);
+
+        okB.addActionListener(e -> initSuccessFrame(textArea, slider.getValue()));
 
     }
 
@@ -123,13 +124,14 @@ public class ReviewBoundary {
             this.rating = rating;
         }
 
-        public void actionPerformed(ActionEvent event){
-            if(ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 1){
+        public void actionPerformed(ActionEvent event) {
+
+            confirmFrame.setVisible(false);
+            if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 1) {
                 frame.setVisible(false);
                 JOptionPane.showMessageDialog(null, "successo");
                 System.exit(0);
-            }
-            else if(ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 0)
+            } else if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 0)
                 JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una recensione riguardante questo articolo", "Error", JOptionPane.ERROR_MESSAGE);
             else
                 JOptionPane.showMessageDialog(null, "numero di caratteri consentito superato", "Warning", JOptionPane.ERROR_MESSAGE);
@@ -137,4 +139,23 @@ public class ReviewBoundary {
         }
     }
 
+    private void initSuccessFrame(JTextArea textarea, int rating) {
+
+        confirmFrame = new JFrame();
+        JPanel confirmPanel = new JPanel();
+        confirmPanel.add(new JLabel("Confermare invio?"));
+        JButton yes = new JButton("Si");
+        JButton no = new JButton("No");
+
+        confirmPanel.add(yes);
+        confirmPanel.add(no);
+        confirmFrame.add(confirmPanel);
+        confirmFrame.pack();
+        confirmFrame.setVisible(true);
+
+        Actions azione = new Actions(textarea, rating);
+        yes.addActionListener(azione);
+
+        no.addActionListener(e -> confirmFrame.setVisible(false));
     }
+}

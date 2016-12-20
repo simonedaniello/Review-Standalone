@@ -24,10 +24,10 @@ class DatabaseController {
     }
 
     boolean setReview(Review review){
-        String sql = "INSERT INTO ARTICLES.recensione (SEGNALAZIONE, UTENTE, ARTICOLO, PROPRIETARIO, TESTO, RAITNG) VALUES ("+
+        String sql = "INSERT INTO ARTICLES.recensione (SEGNALAZIONE, UTENTE, ARTICOLO, PROPRIETARIO, TESTO, RAITNG, TOCHECK) VALUES ("+
                 review.isWarning() +", '" + review.getUser()+"', '" +
                 review.getArticle()+"', '"+ review.getOwner() +"' , '" + review.getReview()+
-                "' , '" + review.getRating()+"')";
+                "' , '" + review.getRating()+"' , 'TRUE')";
 
         try {
             Statement stmt = provider.getConnection().createStatement();

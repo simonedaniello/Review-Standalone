@@ -13,6 +13,7 @@ public class SegnalationBoundary {
     private JFrame frame;
     private String vendor;
     private JTextArea textArea;
+    private JFrame confirmFrame;
 
 
     public SegnalationBoundary(JFrame frame, String vendor){
@@ -60,11 +61,10 @@ public class SegnalationBoundary {
         gbc.insets = new Insets(10, 10, 10, 10);
         mainJpanel.add(buttons, gbc);
 
-        Actions azioneSend = new Actions(0);
         Actions azioneBack = new Actions(1);
 
         backButton.addActionListener(azioneBack);
-        okB.addActionListener(azioneSend);
+        okB.addActionListener(e -> initSuccessFrame());
 
         this.frame.setContentPane(mainJpanel);
         this.frame.pack();
@@ -86,6 +86,7 @@ public class SegnalationBoundary {
                 ArticlesController.getInstance().getReviewBoundary(frame, vendor);
             }
             else if (kind == 0){
+                confirmFrame.setVisible(false);
                 if(ArticlesController.getInstance().sendWarning(textArea.getText(), vendor) == 1) {
                     frame.setVisible(false);
                     JOptionPane.showMessageDialog(null, "successo");
@@ -98,4 +99,23 @@ public class SegnalationBoundary {
         }
     }
 
+    private void initSuccessFrame() {
+
+        confirmFrame = new JFrame();
+        JPanel confirmPanel = new JPanel();
+        confirmPanel.add(new JLabel("Confermare invio?"));
+        JButton yes = new JButton("Si");
+        JButton no = new JButton("No");
+
+        confirmPanel.add(yes);
+        confirmPanel.add(no);
+        confirmFrame.add(confirmPanel);
+        confirmFrame.pack();
+        confirmFrame.setVisible(true);
+
+        Actions azione = new Actions(0);
+        yes.addActionListener(azione);
+
+        no.addActionListener(e -> confirmFrame.setVisible(false));
+    }
 }

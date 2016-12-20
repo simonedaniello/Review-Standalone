@@ -36,15 +36,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/DatabaseController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="324">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding>
+                <element signature="docComment;class#DatabaseController#0" expanded="false" />
                 <element signature="method#DatabaseController#0;class#DatabaseController#0" expanded="false" />
-                <marker date="1482156008138" expanded="true" signature="532:703" ph="INSERT INTO ARTICLES.recensione... " />
-                <marker date="1482156008138" expanded="true" signature="532:848" ph="INSERT INTO ARTICLES.recensione... " />
+                <marker date="1482249974119" expanded="true" signature="532:712" ph="INSERT INTO ARTICLES.recensione... " />
+                <marker date="1482249974119" expanded="true" signature="532:866" ph="INSERT INTO ARTICLES.recensione... " />
               </folding>
             </state>
           </provider>
@@ -66,12 +67,12 @@
       <file leaf-file-name="SegnalationBoundary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/boundary/SegnalationBoundary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
-              <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+            <state relative-caret-position="114">
+              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2133#2134#0" expanded="false" />
-                <element signature="e#2173#2174#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2134#2135#0" expanded="true" />
+                <element signature="e#2174#2175#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,9 +81,12 @@
       <file leaf-file-name="Factory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/Factory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="16" column="105" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
+              <folding>
+                <element signature="method#Factory#0;class#Factory#0" expanded="false" />
+                <element signature="method#getReview#0;class#Factory#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,11 +94,10 @@
       <file leaf-file-name="ReviewBoundary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/boundary/ReviewBoundary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            <state relative-caret-position="168">
+              <caret line="143" column="36" selection-start-line="143" selection-start-column="36" selection-end-line="143" selection-end-column="36" />
               <folding>
-                <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-                <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,34 +106,10 @@
       <file leaf-file-name="Review.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/entity/Review.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="236">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#Review#0" expanded="false" />
-                <element signature="e#272#273#0" expanded="false" />
-                <element signature="e#302#303#0" expanded="false" />
-                <element signature="e#349#350#0" expanded="false" />
-                <element signature="e#387#388#0" expanded="false" />
-                <element signature="e#417#418#0" expanded="false" />
-                <element signature="e#446#447#0" expanded="false" />
-                <element signature="e#487#488#0" expanded="false" />
-                <element signature="e#523#524#0" expanded="false" />
-                <element signature="e#556#557#0" expanded="false" />
-                <element signature="e#585#586#0" expanded="false" />
-                <element signature="e#629#630#0" expanded="false" />
-                <element signature="e#665#666#0" expanded="false" />
-                <element signature="e#696#697#0" expanded="false" />
-                <element signature="e#723#724#0" expanded="false" />
-                <element signature="e#763#764#0" expanded="false" />
-                <element signature="e#795#796#0" expanded="false" />
-                <element signature="e#829#830#0" expanded="false" />
-                <element signature="e#859#860#0" expanded="false" />
-                <element signature="e#905#906#0" expanded="false" />
-                <element signature="e#943#944#0" expanded="false" />
-                <element signature="e#975#976#0" expanded="false" />
-                <element signature="e#1003#1004#0" expanded="false" />
-                <element signature="e#1045#1046#0" expanded="false" />
-                <element signature="e#1079#1080#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -139,25 +118,24 @@
       <file leaf-file-name="ArticlesController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/control/ArticlesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
+            <state relative-caret-position="270">
+              <caret line="26" column="101" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#ArticlesController#0" expanded="false" />
                 <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-                <element signature="e#494#495#0" expanded="false" />
-                <element signature="e#525#526#0" expanded="false" />
+                <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
                 <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+                <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DBinit.sql" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DBinit.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/databaseINIT/DBinit.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="359">
+              <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -182,16 +160,16 @@
       <list>
         <option value="$PROJECT_DIR$/src/control/Observer.java" />
         <option value="$PROJECT_DIR$/src/control/CharactersObserver.java" />
-        <option value="$PROJECT_DIR$/src/control/DatabaseController.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/boundary/ArticleViewBoundary.java" />
         <option value="$PROJECT_DIR$/src/starter/Main.java" />
         <option value="$PROJECT_DIR$/src/entity/Review.java" />
         <option value="$PROJECT_DIR$/src/control/Factory.java" />
         <option value="$PROJECT_DIR$/src/control/ArticlesController.java" />
-        <option value="$PROJECT_DIR$/src/databaseINIT/DBinit.sql" />
-        <option value="$PROJECT_DIR$/src/boundary/SegnalationBoundary.java" />
+        <option value="$PROJECT_DIR$/src/control/DatabaseController.java" />
         <option value="$PROJECT_DIR$/src/boundary/ReviewBoundary.java" />
+        <option value="$PROJECT_DIR$/src/boundary/SegnalationBoundary.java" />
+        <option value="$PROJECT_DIR$/src/databaseINIT/DBinit.sql" />
       </list>
     </option>
   </component>
@@ -202,7 +180,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-744" />
+    <option name="y" value="24" />
     <option name="width" value="1366" />
     <option name="height" value="744" />
   </component>
@@ -357,8 +335,8 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -833,16 +811,17 @@
       <workItem from="1482151154208" duration="4853000" />
       <workItem from="1482165838579" duration="5804000" />
       <workItem from="1482224836976" duration="6108000" />
-      <workItem from="1482234622420" duration="3411000" />
+      <workItem from="1482234622420" duration="3456000" />
+      <workItem from="1482249107934" duration="4213000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42373000" />
+    <option name="totallyTimeSpent" value="46631000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-744" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -898,12 +877,11 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -921,8 +899,7 @@
         <state relative-caret-position="234">
           <caret line="117" column="52" selection-start-line="117" selection-start-column="52" selection-end-line="117" selection-end-column="52" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -940,9 +917,9 @@
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -952,8 +929,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -982,12 +958,11 @@
         <state relative-caret-position="270">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1005,9 +980,9 @@
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1017,8 +992,7 @@
         <state relative-caret-position="918">
           <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1028,9 +1002,10 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="docComment;class#DatabaseController#0" expanded="false" />
             <element signature="method#DatabaseController#0;class#DatabaseController#0" expanded="false" />
-            <marker date="1482156008138" expanded="true" signature="532:703" ph="INSERT INTO ARTICLES.recensione... " />
-            <marker date="1482156008138" expanded="true" signature="532:848" ph="INSERT INTO ARTICLES.recensione... " />
+            <marker date="1482249974119" expanded="true" signature="532:712" ph="INSERT INTO ARTICLES.recensione... " />
+            <marker date="1482249974119" expanded="true" signature="532:866" ph="INSERT INTO ARTICLES.recensione... " />
           </folding>
         </state>
       </provider>
@@ -1059,12 +1034,11 @@
         <state relative-caret-position="270">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1082,9 +1056,9 @@
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1094,8 +1068,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1116,12 +1089,11 @@
         <state relative-caret-position="270">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1139,9 +1111,9 @@
         <state relative-caret-position="180">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1151,8 +1123,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1173,12 +1144,11 @@
         <state relative-caret-position="306">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1212,30 +1182,6 @@
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="docComment;class#Review#0" expanded="false" />
-            <element signature="e#272#273#0" expanded="false" />
-            <element signature="e#302#303#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#387#388#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#446#447#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#556#557#0" expanded="false" />
-            <element signature="e#585#586#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-            <element signature="e#696#697#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#905#906#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#975#976#0" expanded="false" />
-            <element signature="e#1003#1004#0" expanded="false" />
-            <element signature="e#1045#1046#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1245,12 +1191,11 @@
         <state relative-caret-position="702">
           <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1260,9 +1205,10 @@
         <state relative-caret-position="432">
           <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
           <folding>
+            <element signature="docComment;class#DatabaseController#0" expanded="false" />
             <element signature="method#DatabaseController#0;class#DatabaseController#0" expanded="false" />
-            <marker date="1482156008138" expanded="true" signature="532:703" ph="INSERT INTO ARTICLES.recensione... " />
-            <marker date="1482156008138" expanded="true" signature="532:848" ph="INSERT INTO ARTICLES.recensione... " />
+            <marker date="1482249974119" expanded="true" signature="532:712" ph="INSERT INTO ARTICLES.recensione... " />
+            <marker date="1482249974119" expanded="true" signature="532:866" ph="INSERT INTO ARTICLES.recensione... " />
           </folding>
         </state>
       </provider>
@@ -1272,8 +1218,7 @@
         <state relative-caret-position="162">
           <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1283,9 +1228,9 @@
         <state relative-caret-position="90">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1362,90 +1307,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entity/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Review#0" expanded="false" />
-            <element signature="e#272#273#0" expanded="false" />
-            <element signature="e#302#303#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="e#387#388#0" expanded="false" />
-            <element signature="e#417#418#0" expanded="false" />
-            <element signature="e#446#447#0" expanded="false" />
-            <element signature="e#487#488#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-            <element signature="e#556#557#0" expanded="false" />
-            <element signature="e#585#586#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-            <element signature="e#665#666#0" expanded="false" />
-            <element signature="e#696#697#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#763#764#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#829#830#0" expanded="false" />
-            <element signature="e#859#860#0" expanded="false" />
-            <element signature="e#905#906#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#975#976#0" expanded="false" />
-            <element signature="e#1003#1004#0" expanded="false" />
-            <element signature="e#1045#1046#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/control/ArticlesController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="42" column="122" selection-start-line="42" selection-start-column="122" selection-end-line="42" selection-end-column="122" />
+        <state relative-caret-position="270">
+          <caret line="26" column="101" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="docComment;class#ArticlesController#0" expanded="false" />
             <element signature="method#ArticlesController#0;class#ArticlesController#0" expanded="false" />
-            <element signature="e#494#495#0" expanded="false" />
-            <element signature="e#525#526#0" expanded="false" />
+            <element signature="method#sendWarning#0;class#ArticlesController#0" expanded="false" />
             <element signature="method#getSegnalationBoundary#0;class#ArticlesController#0" expanded="false" />
+            <element signature="method#getReviewBoundary#0;class#ArticlesController#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/Factory.java">
+    <entry file="file://$PROJECT_DIR$/src/control/DatabaseController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boundary/SegnalationBoundary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+        <state relative-caret-position="324">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2133#2134#0" expanded="false" />
-            <element signature="e#2173#2174#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/databaseINIT/DBinit.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/boundary/ReviewBoundary.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
-          <folding>
-            <element signature="method#Actions#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
-            <element signature="method#actionPerformed#0;class#Actions#0;class#ReviewBoundary#0" expanded="false" />
+            <element signature="docComment;class#DatabaseController#0" expanded="false" />
+            <element signature="method#DatabaseController#0;class#DatabaseController#0" expanded="false" />
+            <marker date="1482249974119" expanded="true" signature="532:712" ph="INSERT INTO ARTICLES.recensione... " />
+            <marker date="1482249974119" expanded="true" signature="532:866" ph="INSERT INTO ARTICLES.recensione... " />
           </folding>
         </state>
       </provider>
@@ -1461,15 +1345,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/control/DatabaseController.java">
+    <entry file="file://$PROJECT_DIR$/src/control/Factory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="234">
+          <caret line="16" column="105" selection-start-line="16" selection-start-column="105" selection-end-line="16" selection-end-column="105" />
           <folding>
-            <element signature="method#DatabaseController#0;class#DatabaseController#0" expanded="false" />
-            <marker date="1482156008138" expanded="true" signature="532:703" ph="INSERT INTO ARTICLES.recensione... " />
-            <marker date="1482156008138" expanded="true" signature="532:848" ph="INSERT INTO ARTICLES.recensione... " />
+            <element signature="method#Factory#0;class#Factory#0" expanded="false" />
+            <element signature="method#getReview#0;class#Factory#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/entity/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Review#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/boundary/ReviewBoundary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="143" column="36" selection-start-line="143" selection-start-column="36" selection-end-line="143" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/boundary/SegnalationBoundary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2134#2135#0" expanded="true" />
+            <element signature="e#2174#2175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/databaseINIT/DBinit.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
