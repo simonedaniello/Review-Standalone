@@ -86,19 +86,16 @@ public class SegnalationBoundary {
                 ArticlesController.getInstance().getReviewBoundary(frame, vendor);
             }
             else if (kind == 0){
-                frame.setVisible(false);
                 if(ArticlesController.getInstance().sendWarning(textArea.getText(), vendor) == 1) {
                     frame.setVisible(false);
                     JOptionPane.showMessageDialog(null, "successo");
                     System.exit(0);
                 }
                 else if(ArticlesController.getInstance().sendWarning(textArea.getText(), vendor) == 0){
-                    JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una segnalazione riguardante questo venditore");
+                    JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una segnalazione riguardante questo venditore","Error", JOptionPane.ERROR_MESSAGE);
                 }
-
             }
         }
     }
-
 
 }

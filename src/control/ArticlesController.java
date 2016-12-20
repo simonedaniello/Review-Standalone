@@ -24,19 +24,12 @@ public class ArticlesController {
         return instance;
     }
 
-    public int sendReview(String text, String articlename, String username, float rating, String owner){
+    public int sendReview(String text, String articlename, String username, int rating, String owner){
 
         if(text.length() > 300)
             return 2;
         else {
-            Review review = new Review();
-            review.setArticle(articlename);
-            review.setUser(username);
-            review.setReview(text.replace("\'", "\""));
-            review.setRating(rating);
-            review.setOwner(owner);
-            review.setWarning(false);
-
+            Review review = Factory.getInstance().getReview(rating, text.replace("\'", "\""), username, articlename, owner, false);
             if (DatabaseController.getInstance().setReview(review)) {
                 return 1;
             } else {
@@ -47,13 +40,7 @@ public class ArticlesController {
 
     public int sendWarning(String text, String vendor){
 
-        Review review = new Review();
-        review.setArticle(this.articlename);
-        review.setUser(this.username);
-        review.setReview(text.replace("\'", "\""));
-        review.setOwner(vendor);
-        review.setWarning(true);
-
+        Review review = Factory.getInstance().getReview(0, text.replace("\'", "\""), username, articlename, vendor, true);
         if(DatabaseController.getInstance().setReview(review))
             return 1;
         else

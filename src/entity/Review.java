@@ -6,7 +6,7 @@ package entity;
 public class Review {
 
     private boolean warning;
-    private float rating;
+    private int rating;
     private String review;
     private String user;
     private String article;
@@ -20,11 +20,11 @@ public class Review {
         this.warning = warning;
     }
 
-    public float getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(float rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 

@@ -72,7 +72,7 @@ public class ReviewBoundary {
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 1;
-        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.insets = new Insets(0, 0, 0, 0);
         mainJpanel.add(scrollpane, gbc);
 
         gbc.gridx = 0;
@@ -80,24 +80,22 @@ public class ReviewBoundary {
         gbc.insets = new Insets(10, 10, 10, 10);
         mainJpanel.add(characters, gbc);
 
+        JPanel slideAndLabel = new JPanel();
+        slideAndLabel.add(new JLabel("Rating"));
+        slideAndLabel.add(slider);
+
         gbc.gridx = 0;
         gbc.gridy = 3;
         gbc.anchor = GridBagConstraints.PAGE_START;
         gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(new JLabel("Rating"), gbc);
-
-        gbc.gridx = 0;
-        gbc.gridy = 4;
-        gbc.anchor = GridBagConstraints.PAGE_START;
-        gbc.insets = new Insets(10, 10, 10, 10);
-        mainJpanel.add(slider, gbc);
+        mainJpanel.add(slideAndLabel, gbc);
 
         JPanel buttons = new JPanel();
         buttons.add(okB);
         buttons.add(segnalazioneB);
 
         gbc.gridx = 0;
-        gbc.gridy = 5;
+        gbc.gridy = 4;
         gbc.anchor = GridBagConstraints.PAGE_START;
         gbc.insets = new Insets(10, 10, 10, 10);
         mainJpanel.add(buttons, gbc);
@@ -105,8 +103,6 @@ public class ReviewBoundary {
         this.frame.setContentPane(mainJpanel);
         this.frame.pack();
         this.frame.setVisible(true);
-
-
 
         segnalazioneB.addActionListener(e -> {
             frame.setVisible(false);
@@ -134,12 +130,11 @@ public class ReviewBoundary {
                 System.exit(0);
             }
             else if(ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 0)
-                JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una recensione riguardante questo articolo");
+                JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una recensione riguardante questo articolo", "Error", JOptionPane.ERROR_MESSAGE);
             else
-                JOptionPane.showMessageDialog(null, "numero di caratteri consentito superato");
+                JOptionPane.showMessageDialog(null, "numero di caratteri consentito superato", "Warning", JOptionPane.ERROR_MESSAGE);
 
         }
     }
-
 
     }
