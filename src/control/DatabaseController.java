@@ -6,6 +6,7 @@ import entity.Review;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  * @author dandi on 13/12/16.
@@ -38,4 +39,16 @@ class DatabaseController {
         return true;
     }
 
+    ArrayList<String> getArticles(String sql) throws SQLException {
+        ArrayList<String> articoli = new ArrayList<>();
+        Statement stmt = provider.getConnection().createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        if(rs != null){
+            while(rs.next()){
+                articoli.add(rs.getString("NOME"));
+                articoli.add(rs.getString("PROPRIETARIO"));
+            }
+        }
+        return articoli;
+    }
 }

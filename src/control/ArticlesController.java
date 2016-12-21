@@ -6,6 +6,9 @@ import entity.Review;
 
 import javax.swing.*;
 
+import java.sql.SQLException;
+import java.util.ArrayList;
+
 import static com.sun.imageio.plugins.jpeg.JPEG.vendor;
 
 /**
@@ -58,4 +61,21 @@ public class ArticlesController {
         new ReviewBoundary(username, articlename, vendor, frame);
     }
 
+    public ArrayList<String> addElements(DefaultListModel<String> model) throws SQLException {
+        String sql = "SELECT * FROM ARTICLES.articolo";
+        ArrayList<String> articoli = DatabaseController.getInstance().getArticles(sql);
+        if(articoli.size() != 0) {
+            for (int i = 0; i < (articoli.size()) / 2; i++) {
+                model.addElement(articoli.get(i*2));
+            }
+        }
+        return articoli;
+    }
+
+    public void getInitialReviewBoundary(String usernameB, String articlenameB, String vendorB, JFrame frame){
+        frame.repaint();
+        this.username = usernameB;
+        this.articlename = articlenameB;
+        new ReviewBoundary(usernameB, articlenameB, vendorB, frame);
+    }
 }
