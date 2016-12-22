@@ -28,11 +28,16 @@ public class ArticlesController {
     }
 
     public int sendReview(String text, String articlename, String username, int rating, String owner){
+    /*invia la query al database e torna 1 in caso di successo, 0 o 2 altrimenti*/
 
         if(text.length() > 300)
             return 2;
         else {
-            Review review = Factory.getInstance().getReview(rating, text.replace("\'", "\""), username, articlename, owner, false);
+            Review review;
+            if (rating > 0)
+                review = Factory.getInstance().getReview(rating, text.replace("\'", "\""), username, articlename, owner, false);
+            else
+                review = Factory.getInstance().getReview(0, text.replace("\'", "\""), username, articlename, owner, false);
             if (DatabaseController.getInstance().setReview(review)) {
                 return 1;
             } else {
@@ -42,6 +47,8 @@ public class ArticlesController {
     }
 
     public int sendWarning(String text, String vendor){
+
+    /*come sendReview ma invia una segnalazione e non una recensione*/
 
         Review review = Factory.getInstance().getReview(0, text.replace("\'", "\""), username, articlename, vendor, true);
         if(DatabaseController.getInstance().setReview(review))
@@ -62,6 +69,9 @@ public class ArticlesController {
     }
 
     public ArrayList<String> addElements(DefaultListModel<String> model) throws SQLException {
+
+            /*used in exampleBoundary to load all articles in it's JList*/
+
         String sql = "SELECT * FROM ARTICLES.articolo";
         ArrayList<String> articoli = DatabaseController.getInstance().getArticles(sql);
         if(articoli.size() != 0) {
@@ -73,9 +83,13 @@ public class ArticlesController {
     }
 
     public void getInitialReviewBoundary(String usernameB, String articlenameB, String vendorB, JFrame frame){
+
+            /*the same as getReviewBoundary but it's calles by exampleBoundary to start the use case*/
+
         frame.repaint();
         this.username = usernameB;
         this.articlename = articlenameB;
         new ReviewBoundary(usernameB, articlenameB, vendorB, frame);
     }
+
 }

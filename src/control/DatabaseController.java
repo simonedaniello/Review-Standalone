@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * @author dandi on 13/12/16.
  */
-class DatabaseController {
+public class DatabaseController {
 
     private static DatabaseController instance = new DatabaseController();
     private static Provider provider = new Provider();
@@ -20,11 +20,11 @@ class DatabaseController {
 
     }
 
-    static DatabaseController getInstance(){
+    public static DatabaseController getInstance(){
         return instance;
     }
 
-    boolean setReview(Review review){
+    public boolean setReview(Review review){
         String sql = "INSERT INTO ARTICLES.recensione (SEGNALAZIONE, UTENTE, ARTICOLO, PROPRIETARIO, TESTO, RAITNG, TOCHECK) VALUES ("+
                 review.isWarning() +", '" + review.getUser()+"', '" +
                 review.getArticle()+"', '"+ review.getOwner() +"' , '" + review.getReview()+

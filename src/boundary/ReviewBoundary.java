@@ -17,7 +17,7 @@ public class ReviewBoundary {
     private JFrame frame;
     private JFrame confirmFrame;
 
-
+    /*costruisce la boundary principale della recensione*/
     public ReviewBoundary(String username, String article, String vendor, JFrame frame) {
 
         this.username = username;
@@ -139,6 +139,7 @@ public class ReviewBoundary {
         }
     }
 
+    /*chiede la conferma dell'invio della recensione*/
     private void initSuccessFrame(JTextArea textarea, int rating) {
 
         confirmFrame = new JFrame();

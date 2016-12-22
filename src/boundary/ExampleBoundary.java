@@ -18,6 +18,7 @@ public class ExampleBoundary {
     private JList<String> list1;
     private JFrame boundaryCatalogo;
 
+    /* costruisce la starter boundary del caso d'uso */
     private ExampleBoundary(){
 
         DefaultListModel<String> model = new DefaultListModel<>();
@@ -54,6 +55,7 @@ public class ExampleBoundary {
         return instance;
     }
 
+    /*contiene l'azione dell'unico JButton della boundary*/
     private class Actions implements ActionListener {
 
         private Actions(){

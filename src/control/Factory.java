@@ -3,18 +3,18 @@ package control;
 import entity.Review;
 
 
-class Factory {
+public class Factory {
 
     private static Factory instance = new Factory();
 
     private Factory(){
     }
 
-    static Factory getInstance(){
+    public static Factory getInstance(){
         return instance;
     }
 
-    Review getReview(int rating, String text, String user, String article, String owner, boolean warning){
+    public Review getReview(int rating, String text, String user, String article, String owner, boolean warning){
 
         Review review = new Review();
 
