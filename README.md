@@ -16,10 +16,14 @@ this standalone needs a database system to run.
 
 PostgreSQL was used in development but everyone can change database system modifying Provider class (src/databaseINIT/Provider).
 
+PostgreSql can be downloaded here 
+
+https://www.postgresql.org/download/
+
 You have to create you're own database and connect it on you're IDE.
 After you've done it, you can run DBinit.sql (src/databaseINIT/DBinit.sql) and it will create schemas on this database automatically.
 
-You can test this standalone using running main function in src/testing/TestuRunner. 
+You can test this standalone using running main function in src/testing/TestRunner. 
 JUnit JARs can be downloaded here
 
 https://github.com/junit-team/junit4/wiki/Download-and-Install
