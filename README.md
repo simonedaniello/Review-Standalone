@@ -6,7 +6,7 @@ ReviewISPW was developed for the exam "Software Engineering and Web Application"
 This standalone represents a part of an e-commerce web application, 
 showing how review system and segnalation system work.
 
-Another standalone like this can be found at 
+Another standalone of this project can be found at 
 
 https://github.com/simonedaniello/researchISPW
 
@@ -27,6 +27,7 @@ You can test this standalone using running main function in src/testing/TestRunn
 JUnit JARs can be downloaded here
 
 https://github.com/junit-team/junit4/wiki/Download-and-Install
+
 ##Development environment
 
 * IDEA IntelliJ - IDE
