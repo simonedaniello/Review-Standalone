@@ -20,8 +20,7 @@ public class JunitDatabase {
     }
 
     @Test
-    public void testSetReview()
-    {
+    public void testSetReview() throws ClassNotFoundException {
         Review review = Factory.getInstance().getReview(0, "test", "simone@gmail.com", "gonna lunga", "simone@gmail.com", false);
         assertTrue(DatabaseController.getInstance().setReview(review));
         review = Factory.getInstance().getReview(0, "test", "simone@gmail.com", "gonna lunga", "simone@gmail.com", true);

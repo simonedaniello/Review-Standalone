@@ -12,14 +12,22 @@ import java.util.ArrayList;
 
 public class ExampleBoundary {
 
-    private static ExampleBoundary instance = new ExampleBoundary();
+    private static ExampleBoundary instance;
+
+    static {
+        try {
+            instance = new ExampleBoundary();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
     private ArrayList<String> articoli;
     private JList<String> list1;
     private JFrame boundaryCatalogo;
 
     /* costruisce la starter boundary del caso d'uso */
-    private ExampleBoundary(){
+    private ExampleBoundary() throws ClassNotFoundException {
 
         DefaultListModel<String> model = new DefaultListModel<>();
         list1 = new JList<>();

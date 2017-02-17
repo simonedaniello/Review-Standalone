@@ -127,14 +127,18 @@ public class ReviewBoundary {
         public void actionPerformed(ActionEvent event) {
 
             confirmFrame.setVisible(false);
-            if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 1) {
-                frame.setVisible(false);
-                JOptionPane.showMessageDialog(null, "successo");
-                System.exit(0);
-            } else if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 0)
-                JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una recensione riguardante questo articolo", "Error", JOptionPane.ERROR_MESSAGE);
-            else
-                JOptionPane.showMessageDialog(null, "numero di caratteri consentito superato", "Warning", JOptionPane.ERROR_MESSAGE);
+            try {
+                if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 1) {
+                    frame.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "successo");
+                    System.exit(0);
+                } else if (ArticlesController.getInstance().sendReview(textarea.getText(), article, username, rating, vendor) == 0)
+                    JOptionPane.showMessageDialog(null, "fallimento, probabilmente hai già scritto una recensione riguardante questo articolo", "Error", JOptionPane.ERROR_MESSAGE);
+                else
+                    JOptionPane.showMessageDialog(null, "numero di caratteri consentito superato", "Warning", JOptionPane.ERROR_MESSAGE);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
 
         }
     }

@@ -27,7 +27,7 @@ public class ArticlesController {
         return instance;
     }
 
-    public int sendReview(String text, String articlename, String username, int rating, String owner){
+    public int sendReview(String text, String articlename, String username, int rating, String owner) throws ClassNotFoundException {
     /*invia la query al database e torna 1 in caso di successo, 0 o 2 altrimenti*/
 
         if(text.length() > 300)
@@ -46,7 +46,7 @@ public class ArticlesController {
         }
     }
 
-    public int sendWarning(String text, String vendor){
+    public int sendWarning(String text, String vendor) throws ClassNotFoundException {
 
     /*come sendReview ma invia una segnalazione e non una recensione*/
 
@@ -68,7 +68,7 @@ public class ArticlesController {
         new ReviewBoundary(username, articlename, vendor, frame);
     }
 
-    public ArrayList<String> addElements(DefaultListModel<String> model) throws SQLException {
+    public ArrayList<String> addElements(DefaultListModel<String> model) throws SQLException, ClassNotFoundException {
 
             /*used in exampleBoundary to load all articles in it's JList*/
 
@@ -87,9 +87,9 @@ public class ArticlesController {
             /*the same as getReviewBoundary but it's calles by exampleBoundary to start the use case*/
 
         frame.repaint();
-        this.username = usernameB;
-        this.articlename = articlenameB;
-        new ReviewBoundary(usernameB, articlenameB, vendorB, frame);
+        this.username = usernameB.replaceAll("'", "''");
+        this.articlename = articlenameB.replaceAll("'", "''");
+        new ReviewBoundary(this.username, this.articlename, vendorB, frame);
     }
 
 }

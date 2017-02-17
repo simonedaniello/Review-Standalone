@@ -12,40 +12,40 @@ CREATE SCHEMA USERS;
 
 
 CREATE TABLE USERS.UtenteRegistrato(
-  EMAIL            VARCHAR                ,
-  ID            VARCHAR                ,
-  PASSWORD        VARCHAR                ,
-  CONTATTO        VARCHAR                ,
+  EMAIL            VARCHAR(255)                ,
+  ID            VARCHAR(255)                ,
+  PASSWORD        VARCHAR(255)                ,
+  CONTATTO        VARCHAR(255)                ,
   PRIMARY KEY (EMAIL)
 );
 
 
 CREATE TABLE USERS.Azienda(
-  PIVA            VARCHAR                ,
-  NOMEAZIENDA        VARCHAR                ,
-  SETTORE        VARCHAR                ,
-  SUPPORTO        VARCHAR                ,
-  TELEFONO        VARCHAR                ,
-  EMAIL            VARCHAR
+  PIVA            VARCHAR(255)                ,
+  NOMEAZIENDA        VARCHAR(255)                ,
+  SETTORE        VARCHAR(255)                ,
+  SUPPORTO        VARCHAR(255)                ,
+  TELEFONO        VARCHAR(255)                ,
+  EMAIL            VARCHAR(255)
     REFERENCES USERS.UtenteRegistrato(EMAIL),
   PRIMARY KEY (PIVA)
 );
 
 
 CREATE TABLE USERS.Privato(
-  NOME            VARCHAR                ,
-  COGNOME        VARCHAR                ,
-  TELEFONO        VARCHAR                ,
-  EMAIL            VARCHAR
+  NOME            VARCHAR(255)                ,
+  COGNOME        VARCHAR(255)                ,
+  TELEFONO        VARCHAR(255)                ,
+  EMAIL            VARCHAR(255)
     REFERENCES USERS.UtenteRegistrato(EMAIL),
   PRIMARY KEY (EMAIL)
 );
 
 
 CREATE TABLE USERS.Admin(
-  NOME            VARCHAR                ,
-  COGNOME        VARCHAR                ,
-  EMAIL            VARCHAR
+  NOME            VARCHAR(255)                ,
+  COGNOME        VARCHAR(255)                ,
+  EMAIL            VARCHAR(255)
     REFERENCES USERS.UtenteRegistrato(EMAIL),
   PRIMARY KEY (EMAIL)
 );
@@ -66,52 +66,52 @@ CREATE SCHEMA ARTICLES;
 
 
 CREATE TABLE ARTICLES.articolo(
-  NOME            VARCHAR                ,
-  PROPRIETARIO        VARCHAR
+  NOME            VARCHAR(255)                ,
+  PROPRIETARIO        VARCHAR(255)
     REFERENCES USERS.UtenteRegistrato(EMAIL),
   PREZZO            FLOAT                ,
-  QUANTITA        VARCHAR                ,
+  QUANTITA        VARCHAR(255)                ,
   PRIMARY KEY (NOME, PROPRIETARIO)
 );
 
 
 CREATE TABLE ARTICLES.libro(
-  TITOLO            VARCHAR                ,
-  PROPRIETARIO        VARCHAR,
-  NOME            VARCHAR,
+  TITOLO            VARCHAR(255)                ,
+  PROPRIETARIO        VARCHAR(255),
+  NOME            VARCHAR(255),
   FOREIGN KEY (NOME, PROPRIETARIO) REFERENCES ARTICLES.articolo(NOME, PROPRIETARIO),
-  AUTORE            VARCHAR                ,
-  CASA            VARCHAR                ,
+  AUTORE            VARCHAR(255)                ,
+  CASA            VARCHAR(255)                ,
   PAGINE            INT                ,
   PRIMARY KEY (NOME, PROPRIETARIO)
 );
 
 
 CREATE TABLE ARTICLES.informatica(
-  TIPO            VARCHAR                ,
-  PROPRIETARIO        VARCHAR,
-  NOME            VARCHAR,
+  TIPO            VARCHAR(255)                ,
+  PROPRIETARIO        VARCHAR(255),
+  NOME            VARCHAR(255),
   FOREIGN KEY (NOME, PROPRIETARIO) REFERENCES ARTICLES.articolo(NOME, PROPRIETARIO),
-  MODELLO          VARCHAR                ,
-  MARCA            VARCHAR                ,
+  MODELLO          VARCHAR(255)                ,
+  MARCA            VARCHAR(255)                ,
   PRIMARY KEY (NOME, PROPRIETARIO)
 );
 
 
 CREATE TABLE ARTICLES.Abbigliamento(
-  TIPO            VARCHAR                ,
-  PROPRIETARIO        VARCHAR,
-  NOME            VARCHAR,
+  TIPO            VARCHAR(255)                ,
+  PROPRIETARIO        VARCHAR(255),
+  NOME            VARCHAR(255),
   FOREIGN KEY (NOME, PROPRIETARIO) REFERENCES ARTICLES.articolo(NOME, PROPRIETARIO),
   TAGLIA            INT                ,
-  MARCA            VARCHAR                ,
+  MARCA            VARCHAR(255)                ,
   PRIMARY KEY (NOME, PROPRIETARIO)
 );
 
 CREATE TABLE ARTICLES.Scolastico(
-  MATERIA        VARCHAR                ,
-  PROPRIETARIO        VARCHAR,
-  NOME            VARCHAR,
+  MATERIA        VARCHAR(255)                ,
+  PROPRIETARIO        VARCHAR(255),
+  NOME            VARCHAR(255),
   FOREIGN KEY (NOME, PROPRIETARIO) REFERENCES ARTICLES.libro(NOME, PROPRIETARIO),
   EDIZIONE        INT                ,
   PRIMARY KEY (NOME, PROPRIETARIO)
@@ -119,21 +119,21 @@ CREATE TABLE ARTICLES.Scolastico(
 
 CREATE TABLE ARTICLES.recensione(
   SEGNALAZIONE        BOOLEAN,
-  UTENTE              VARCHAR,
-  ARTICOLO            VARCHAR,
-  PROPRIETARIO        VARCHAR,
-  TESTO               VARCHAR,
-  RAITNG              INT  ,
+  UTENTE              VARCHAR(255),
+  ARTICOLO            VARCHAR(255),
+  PROPRIETARIO        VARCHAR(255),
+  TESTO               VARCHAR(255),
+  RAITNG              INT    ,
   TOCHECK             BOOLEAN,
   FOREIGN KEY (UTENTE) REFERENCES USERS.UtenteRegistrato(EMAIL),
   FOREIGN KEY (ARTICOLO, PROPRIETARIO) REFERENCES ARTICLES.articolo(NOME, PROPRIETARIO),
-  PRIMARY KEY (UTENTE, ARTICOLO, SEGNALAZIONE)
+  PRIMARY KEY (UTENTE, ARTICOLO)
 );
 
 CREATE TABLE ARTICLES.acquisti(
-    UTENTE           VARCHAR,
-    ARTICOLO         VARCHAR,
-    PROPRIETARIO     VARCHAR,
+    UTENTE           VARCHAR(255),
+    ARTICOLO         VARCHAR(255),
+    PROPRIETARIO     VARCHAR(255),
     FOREIGN KEY (ARTICOLO, PROPRIETARIO) REFERENCES ARTICLES.articolo(NOME, PROPRIETARIO),
     FOREIGN KEY (UTENTE) REFERENCES USERS.Privato(EMAIL)
 );
